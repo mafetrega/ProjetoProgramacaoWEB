@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style_login.css">
+
+    <title>Blog de Filmes</title>
+</head>
+
+<body>
+
+    <a href="index.html">
+        <button class="button">
+            <div class="button-box">
+                <span class="button-elem">
+                    <svg viewBox="0 0 46 40" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                        </path>
+                    </svg>
+                </span>
+                <span class="button-elem">
+                    <svg viewBox="0 0 46 40">
+                        <path
+                            d="M46 20.038c0-.7-.3-1.5-.8-2.1l-16-17c-1.1-1-3.2-1.4-4.4-.3-1.2 1.1-1.2 3.3 0 4.4l11.3 11.9H3c-1.7 0-3 1.3-3 3s1.3 3 3 3h33.1l-11.3 11.9c-1 1-1.2 3.3 0 4.4 1.2 1.1 3.3.8 4.4-.3l16-17c.5-.5.8-1.1.8-1.9z">
+                        </path>
+                    </svg>
+                </span>
+            </div>
+        </button>
+    </a>
+
+    <form class="form" id="cadastro">
+        <p id="msg"></p>
+
+        <div class="flex-row">
+            <div class="flex-column col">
+                <label class="label-cadastro">Nome</label>
+                <div class="inputForm">
+                    <span class="material-icons">account_circle</span>
+                    <input type="text" id="nome" class="input" placeholder="Digite seu nome">
+                </div>
+            </div>
+            <div class="flex-column col">
+                <label class="label-cadastro">Sobrenome</label>
+                <div class="inputForm">
+                    <span class="material-icons">account_circle</span>
+                    <input type="text" id="sobrenome" class="input" placeholder="Digite seu sobrenome">
+                </div>
+            </div>
+        </div>
+
+        <div class="flex-column">
+            <label class="label-cadastro">Email</label>
+            <div class="inputForm">
+                <span class="material-icons">alternate_email</span>
+                <input type="email" id="email" class="input" placeholder="Digite seu email">
+            </div>
+        </div>
+
+        <div class="flex-row">
+            <div class="flex-column col">
+                <label class="label-cadastro">Senha</label>
+                <div class="inputForm">
+                    <span class="material-icons">lock</span>
+                    <input type="password" id="senha" class="input" placeholder="Digite sua senha">
+                    <span class="material-icons" id="lnr-eye"></span>
+                </div>
+            </div>
+            <div class="flex-column col">
+                <label class="label-cadastro">Confirme sua Senha</label>
+                <div class="inputForm">
+                    <span class="material-icons">lock</span>
+                    <input type="password" id="confirmacao_senha" class="input" placeholder="Confirme sua senha">
+                    <span class="material-icons" id="lnr-eye"></span>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="button-submit">Entrar</button>
+
+        <p class="p">Já tem cadastro? <a href="login.html" class="link-login"><span class="span">Faça login
+                    aqui</span></a></p>
+    </form>
+
+    <script>
+        let btn = document.querySelector('#lnr-eye');
+        btn.innerHTML = `visibility_off`;
+        btn.style.cursor = 'pointer';
+
+        btn.addEventListener('click', function () {
+
+            let input = document.querySelector('#senha');
+
+            if (input.getAttribute('type') == 'password') {
+                input.setAttribute('type', 'text');
+                btn.innerHTML = `visibility`;
+            } else {
+                input.setAttribute('type', 'password');
+                btn.innerHTML = `visibility_off`;
+            }
+
+        });
+    </script>
+
+    <script>
+        document.getElementById("cadastro").addEventListener("submit", () => {
+            event.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const sobrenome = document.getElementById("sobrenome").value;
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+            const confirmacao_senha = document.getElementById("confirmacao_senha").value;
+
+            const resultado = document.getElementById("msg");
+
+            console.log(senha);
+            console.log(confirmacao_senha);
+
+            if (nome == "" || sobrenome == "" || email == "" || senha == "" || confirmacao_senha == "") {
+                resultado.innerHTML = `Preencha os campos corretamente!`;
+            } else if (confirmacao_senha != senha) {
+                resultado.innerHTML = `As senhas não conferem!`;
+            }
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>
