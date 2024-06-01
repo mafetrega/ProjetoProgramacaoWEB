@@ -68,9 +68,10 @@
                 <ul>
                     <li class="li-card"><i class="material-icons">schedule</i> Lançamento: 2002</li>
                     <li class="li-card"><i class="material-icons">videocam</i> Direção: Amy </li>
-                    <li class="li-card"><i class="material-icons">star</i> Elenco: Lauren Graham, Alexis Bledel, Melissa
+                    <li class="li-card"><i class="material-icons">people</i> Elenco: Lauren Graham, Alexis Bledel, Melissa
                         McCarthy, Keiko Agena, Yanic Truesdale, Scott Patterson, Kelly Bishop, Edward Herrmann, Liza
                         Weil, Jared Padalecki, Milo Ventimiglia, Sean Gunn, Chris Eigeman, Matt Czuchry</li>
+                    <li class="li-card"><i class="material-icons">playlist_play</i> 07 temporadas - 153 Episódios</li>
                     <li class="li-card"><i class="material-icons">star</i> Avalição:</li>
                 </ul>
             </div>
@@ -110,6 +111,47 @@
                 habilidade de capturar os altos e baixos da vida de uma forma autêntica e envolvente a torna uma adição
                 valiosa à cultura pop.
             </p>
+        </div>
+
+        <div class="elenco-resenha">
+            <h2>Elenco Principal</h2>
+            <div class="row">
+                <div class="col s3 m3 l3 xl3">
+                    <div class="card card-elenco">
+                        <div class="card-image imagem-elenco">
+                            <img src="imagens/gilmore/LaurenGraham.jpg">
+                            <span class="card-title">Lauren Graham</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s3 m3 l3 xl3">
+                    <div class="card card-elenco">
+                        <div class="card-image imagem-elenco">
+                            <img src="imagens/gilmore/AlexisBledel.webp">
+                            <span class="card-title">Alexis Bledel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s3 m3 l3 xl3">
+                    <div class="card card-elenco">
+                        <div class="card-image imagem-elenco">
+                            <img src="imagens/gilmore/ScottPatterson.jpg">
+                            <span class="card-title">Scott Patterson</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col s3 m3 l3 xl3">
+                    <div class="card card-elenco">
+                        <div class="card-image imagem-elenco">
+                            <img src="imagens/gilmore/KellyBishop.jpg">
+                            <span class="card-title">Kelly Bishop</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -151,6 +193,8 @@
         $(document).ready(function () {
             $(".button-collapse").sideNav();
             $('.parallax').parallax();
+            $('ul.tabs').tabs();
+            $('ul.tabs').tabs('select_tab', 'tab_id');
         });
     </script>
 
