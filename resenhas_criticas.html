@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/style_button.css">
+    <link rel="stylesheet" type="text/css" href="css/style_teste.css">
 
     <title>Blog de Filmes</title>
 </head>
@@ -43,6 +44,54 @@
 
     <h1 class="title">RESENHAS E CRITICAS</h1>
 
+    <div class="cards-resenha">
+        <div class="row">
+            <div class="col s12 m3 l3 xl3">
+                <div class="card-resenha">
+                    <img id="img-resenha" src="imagens/gilmore.jpg" />
+                    <div class="conteudo-card">
+                        <h5 class="titulo-card">Gilmore Girls</h5>
+                        <span id="conteudo-gilmore"></span>
+                    </div>
+                    <a href="#"></a>
+                </div>
+            </div>
+
+            <div class="col s12 m3 l3 xl3">
+                <div class="card-resenha">
+                    <img id="img-resenha" src="imagens/b99.jpg" />
+                    <div class="conteudo-card">
+                        <h5 class="titulo-card">Brooklyn Nine-Nine</h5>
+                        <span id="conteudo-b99"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m3 l3 xl3">
+                <div class="card-resenha">
+                    <img id="img-resenha" src="imagens/Jane_Virgin.jpg" />
+                    <div class="conteudo-card">
+                        <h5 class="titulo-card">Jane The Virgin</h5>
+                        <span id="conteudo-Jane"></span>
+                    </div>
+                    <a href="#"></a>
+                </div>
+            </div>
+
+            <div class="col s12 m3 l3 xl3">
+                <div class="card-resenha">
+                    <img id="img-resenha" src="imagens/sherlock_holmes.jpg" />
+                    <div class="conteudo-card">
+                        <h5 class="titulo-card">Sherlock</h5>
+                        <span id="conteudo-Sherlock"></span>
+                    </div>
+                    <a href="#"></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--
     <div class="cards-resenha">
         <div class="row">
             <div class="col s12 m6 l6 xl6">
@@ -115,6 +164,67 @@
         </div>
     </div>
 
+-->
+    <!-- Jquery e JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $(".button-collapse").sideNav();
+        });
+
+    </script>
+
+    <script>
+
+        document.getElementById("img-resenha").onmouseover = function () { mouseOver() };
+        document.getElementById("img-resenha").onmouseout = function () { mouseOut() };
+
+        const conteudo_gilmore = document.getElementById("conteudo-gilmore");
+        const conteudo_b99 = document.getElementById("conteudo-b99");
+        const conteudo_Jane = document.getElementById("conteudo-Jane");
+        const conteudo_Sherlock = document.getElementById("conteudo-Sherlock");
+
+        function mouseOver() {
+            conteudo_gilmore.innerHTML = `
+            <ul>
+                <li class="li-card"><i class="material-icons">schedule</i> Lançamento: 2002</li>
+                <li class="li-card"><i class="material-icons">videocam</i> Direção: Amy </li>
+                <li class="li-card"><i class="material-icons">star</i> Avalição:</li>
+            </ul>`;
+
+            conteudo_b99.innerHTML = `
+            <ul>
+                <li class="li-card"><i class="material-icons">schedule</i> Lançamento: 2002</li>
+                <li class="li-card"><i class="material-icons">videocam</i> Direção: Amy </li>
+                <li class="li-card"><i class="material-icons">star</i> Avalição:</li>
+            </ul>`;
+
+            conteudo_Jane.innerHTML = `
+            <ul>
+                <li class="li-card"><i class="material-icons">schedule</i> Lançamento: 2002</li>
+                <li class="li-card"><i class="material-icons">videocam</i> Direção: Amy </li>
+                <li class="li-card"><i class="material-icons">star</i> Avalição:</li>
+            </ul>`;
+
+            conteudo_Sherlock.innerHTML = `
+            <ul>
+                <li class="li-card"><i class="material-icons">schedule</i> Lançamento: 2002</li>
+                <li class="li-card"><i class="material-icons">videocam</i> Direção: Amy </li>
+                <li class="li-card"><i class="material-icons">star</i> Avalição:</li>
+            </ul>`;
+        }
+
+        function mouseOut() {
+            conteudo_gilmore.innerHTML = ``;
+            conteudo_b99.innerHTML = ``;
+            conteudo_Jane.innerHTML = ``;
+            conteudo_Sherlock.innerHTML = ``;
+        }
+    </script>
 
 </body>
 
