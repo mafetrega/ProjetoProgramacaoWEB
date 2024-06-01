@@ -32,7 +32,7 @@ header div.row div {
 
 .tipo-faixa1,
 .tipo-faixa2 {
-    padding: 3%;
+    padding: 0% 2% 2% 2%;
 }
 
 .tipo-faixa1 {
@@ -43,6 +43,7 @@ header div.row div {
 
 nav {
     background-color: #130113;
+    box-shadow: none;
 }
 
 .side-nav {
@@ -59,6 +60,12 @@ nav {
 
 /* Cards */
 
+.card {
+    background-color: transparent;
+    height: 70vh;
+    border-radius: 10px;
+}
+
 .cards-resenha {
     width: 90%;
     margin: 0 auto;
@@ -66,12 +73,13 @@ nav {
 
 .img-card {
     width: 100%;
-    height: 70vh;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: top;
 }
 
 .card-cartaz {
-    /* flex: 1 0 5%;
-    margin: 1%;*/
     width: 23%;
     margin: 1%;
 }
@@ -94,12 +102,13 @@ nav {
 
 .card-number {
     position: absolute;
-    background: #393753;
-    font-size: 25px;
+    background: #130113;
+    font-size: 20px;
     color: #fff;
-    padding: 2px 6px;
-    margin: 29% 18%;
-    border-radius: 3px;
+    padding: 12px 18px;
+    border-radius: 100%;
+    bottom: 1%;
+    right: 1%;
 }
 
 .card_texto {
@@ -148,7 +157,7 @@ nav {
     padding: 0;
 }
 
-.card .card-content{
+.card .card-content {
     padding: 15px;
 }
 
@@ -183,7 +192,7 @@ nav {
 .ficha {
     font-size: 16px;
     padding-left: 0;
-    width: 40%;
+    width: 50%;
 }
 
 .ficha ul {
@@ -196,8 +205,8 @@ nav {
 }
 
 .trailer {
-    width: 100vh;
-    height: 70vh;
+    height: 60vh;
+    width: 50%;
 }
 
 iframe {
@@ -211,7 +220,7 @@ iframe {
     margin-top: 5%;
 }
 
-.imagem-elenco img{
+.imagem-elenco img {
     height: 50vh;
     object-fit: cover;
     object-position: top;
@@ -222,6 +231,41 @@ iframe {
     background-color: #0000004d;
     border-radius: 100px;
     box-shadow: 0px 0px 20px 20px #0000004d;
+}
+
+.card-resenha a {
+    color: #fff;
+}
+
+.card-resenha {
+    position: relative;
+    margin: 5% 0;
+    width: 100%;
+    color: #fff;
+    text-align: left;
+    font-size: 16px;
+}
+
+.conteudo-card {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 15px 20px;
+}
+
+.card-resenha img {
+    height: 65vh;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.card-resenha img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    filter: brightness(0.5);
 }
 
 /* Footer */
@@ -236,12 +280,14 @@ iframe {
         flex: 1 0 100%;
     }
 
-    .inicio div {
-        height: 45vh;
-    }
-
     .row .col.m6 {
         margin: 1% 0;
+    }
+
+    .card-number {
+        font-size: 20px;
+        padding: 12px 18px;
+        border-radius: 100%;
     }
 
     .card.horizontal .card-image img {
@@ -249,8 +295,60 @@ iframe {
         height: 30vh;
     }
 
+    .img-card {
+        width: 100%;
+        border-radius: 10px;
+        height: 60vh;
+        object-fit: cover;
+        object-position: top;
+    }
+
     .infos {
         display: block;
+    }
+
+    .trailer {
+        width: 100%;
+        height: 35vh;
+    }
+
+    iframe {
+        width: 100%;
+        height: 68%;
+    }
+
+    .ficha {
+        font-size: 16px;
+        padding-left: 0;
+        width: 100%;
+        text-align: justify;
+    }
+
+    .ficha ul {
+        padding-left: 0;
+    }
+
+    .ficha h2 {
+        margin: 5% 0;
+    }
+
+    .texto-resenha {
+        text-align: justify;
+        font-size: 16px;
+        margin-top: 5%;
+    }
+
+    .imagem-elenco img {
+        height: 50vh;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .imagem-elenco .card-title {
+        font-weight: bold;
+        background-color: #0000004d;
+        border-radius: 100px;
+        box-shadow: 0px 0px 20px 20px #0000004d;
     }
 }
 
@@ -258,10 +356,6 @@ iframe {
 @media (min-width: 768px) and (max-width: 1200px) {
     .card-cartaz {
         flex: 1 0 100%;
-    }
-
-    .inicio div {
-        height: 45vh;
     }
 
     .row .col.m6 {
@@ -306,8 +400,4 @@ iframe {
 
 
 /* Estilos para desktops */
-@media (min-width: 1201px) {
-    .inicio div {
-        height: 90vh;
-    }
-}
+@media (min-width: 1201px) {}
