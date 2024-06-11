@@ -7,6 +7,21 @@ body {
     font-family: "Noto Sans SC", sans-serif;
 }
 
+body::-webkit-scrollbar {
+    width: 12px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #ffffff2e;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #130113;
+    border-radius: 20px;
+    border: 3px solid #ffffff2e;
+}
+
 
 header div.container {
     width: 100%;
@@ -30,6 +45,10 @@ header div.row div {
     margin: 1%;
 }
 
+.title-resenhas {
+    margin-top: 5%;
+}
+
 .tipo-faixa1,
 .tipo-faixa2 {
     padding: 0% 2% 2% 2%;
@@ -39,11 +58,71 @@ header div.row div {
     background-color: #000000;
 }
 
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    filter: brightness(0.3);
+    position: absolute;
+}
+
+.swiper-slide .info-carousel {
+    position: relative;
+    color: #fff;
+    margin: 15%;
+    text-align: center;
+    height: 100%;
+}
+
+.swiper-slide .info-carousel a {
+    color: #ffffffdb;
+}
+
+.swiper-slide .info-carousel a:hover {
+    color: #ffa7ff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #130113;
+}
+
+.swiper-pagination-bullet-active {
+    background: #130113;
+}
+
+.swiper-slide .info-carousel .btn-carousel {
+    background-color: #130113;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1% 2%;
+    margin-top: 10%;
+}
+
+.swiper-slide .info-carousel .btn-carousel:hover {
+    background-color: #ffa7ff;
+    color: #130113;
+    transition: all 0.5s;
+}
+
 /* Nav */
 
 nav {
-    background-color: #130113;
+    background-color: #13011300;
     box-shadow: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+}
+
+.test {
+    background-color: #130113;
 }
 
 .side-nav {
@@ -69,6 +148,11 @@ nav {
 .cards-resenha {
     width: 90%;
     margin: 0 auto;
+    margin-top: 6%;
+}
+
+.cards-resenha h4 {
+    color: #fff;
 }
 
 .img-card {
@@ -175,6 +259,10 @@ nav {
     height: 100%;
 }
 
+.parallax img {
+    filter: brightness(0.8);
+}
+
 .titulo-resenha {
     position: absolute;
     width: 80%;
@@ -272,6 +360,7 @@ iframe {
     object-fit: cover;
     object-position: top;
     transition: all 0.3s ease-in-out;
+    border-radius: 10px;
 
 }
 
@@ -356,6 +445,20 @@ iframe {
         font-size: 16px;
         margin-top: 5%;
     }
+
+    .swiper {
+        width: 100%;
+        height: 70vh;
+    }
+
+    .swiper-slide .info-carousel {
+        margin: 35% 15%;
+    }
+
+    .swiper-slide .info-carousel .btn-carousel {
+        padding: 4% 6%;
+    }
+
 }
 
 /* Estilos para tablets */
